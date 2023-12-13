@@ -1,113 +1,56 @@
-import Image from 'next/image'
+// COMPONENTE PARA EL APARTADO DE HOME
 
+// Componente Home que se exportará y usará para mostrar la página de inicio
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    // Contenedor principal del componente con estilo Flexbox y un color de fondo
+    <div className="flex flex-col min-h-screen bg-slate-300">
+      {/* Cabecera del sitio con estilo y color de fondo */}
+      <header className="bg-blue-600 text-white p-6">
+        {/* Título de la página con estilo de fuente y tamaño */}
+        <h1 className="text-3xl font-bold text-center">Upweb</h1>
+      </header>
+
+      {/* Contenido principal de la página con espaciado y ajustes responsive */}
+      <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Subtítulo o mensaje de bienvenida con estilo de fuente y tamaño */}
+        <h2 className="text-4xl font-bold text-center mb-10">Bienvenido a Upweb</h2>
+        
+        {/* Contenedor para los paneles de información con diseño de rejilla responsivo */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Primer panel con su propio estilo y color de fondo */}
+          <div className="bg-sky-500 shadow-md rounded-lg p-6">
+            {/* Título del primer panel con estilo y tamaño de fuente */}
+            <h3 className="font-semibold text-lg mb-2">¿Qué somos?</h3>
+            {/* Descripción del primer panel */}
+            <p>Aplicación para que cualquier comercio registrado pueda subir su propia Web con contenido.</p>
+          </div>
+          
+          {/* Segundo panel similar al primero, pero con un color de fondo diferente */}
+          <div className="bg-sky-600 shadow-md rounded-lg p-6">
+            {/* Título del segundo panel con estilo y tamaño de fuente */}
+            <h3 className="font-semibold text-lg mb-2">¿Para que servimos?</h3>
+            {/* Descripción del segundo panel */}
+            <p>Los usuarios pueden buscar y visualizar los comercios de una ciudad y de una actividad concreta.</p>
+          </div>
+
+          {/* Tercer panel similar a los anteriores, pero con un color de fondo aún más oscuro  */}
+          <div className="bg-sky-700 shadow-md rounded-lg p-6">
+            {/* Título del tercer panel con estilo y tamaño de fuente */}
+            <h3 className="font-semibold text-lg mb-2">¿Cómo funcionamos?</h3>
+            {/* Descripción del tercer panel */}
+            <p>Los administradores, los comercios y los usuarios pueden iniciar sesión en sus respectivos apartados,
+              disfrutando así de sus posibles funcionalidades.
+            </p>
+          </div>
         </div>
-      </div>
+      </main>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+      {/* Pie de página con su propio estilo y color de fondo */}
+      <footer className="bg-gray-800 text-white text-center p-4">
+        {/* Mensaje de derechos de autor con el año actual */}
+        <p>&copy; {new Date().getFullYear()} Upweb. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  );
+};
